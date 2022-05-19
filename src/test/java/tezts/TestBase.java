@@ -27,7 +27,7 @@ public class TestBase implements BeforeAllCallback, BeforeEachCallback, AfterAll
       .setAcceptInsecureCerts(true))
     .browserInDocker()
     .browserVersion("99")
-//    .dockerVolumes(resourcesFolder.toString() + ":/resources")
+    .dockerVolumes(resourcesFolder.toString() + ":" + resourcesFolder.toString()) // does not work on windows
     .enableVnc();
 
   @Override

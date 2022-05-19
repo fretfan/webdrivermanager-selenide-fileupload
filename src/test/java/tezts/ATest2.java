@@ -18,11 +18,11 @@ public class ATest2 {
   void fileUpload() {
     open("https://ps.uci.edu/~franklin/doc/file_upload.html");
     Path path = Paths.get("src/test/resources/1.txt");
-    Path path1 = Paths.get("/resources/1.txt");
-    String filePath = path1.toFile().getPath();
+//    Path path1 = Paths.get("/resources/1.txt");
+//    String filePath = path1.toFile().getPath();
 
-//    $(By.name("userfile")).uploadFile(path1.toFile());
-    $(By.name("userfile")).uploadFromClasspath("1.txt");
+    $(By.name("userfile")).uploadFile(path.toFile());
+//    $(By.name("userfile")).uploadFromClasspath("1.txt");
     System.out.println("done");
   }
 
